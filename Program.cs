@@ -8,7 +8,7 @@
 
             if (CheckingNumber(number))
             {
-                
+                Console.WriteLine(Sum(number));
             }
             else
             {
@@ -27,6 +27,16 @@
             }
 
             return isNumber;
+        }
+
+        static double Sum(string n)
+        {
+            double sum = 0;
+
+            foreach (char s in n)
+                sum += char.GetNumericValue(s);
+
+            return sum;
         }
     }
 }
