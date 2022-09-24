@@ -1,4 +1,6 @@
-﻿namespace Lab5
+﻿using System.Globalization;
+
+namespace Lab5
 {
     internal class Program
     {
@@ -18,9 +20,9 @@
                     if (intNumber > 0)
                         new_array[i] = Factorial(intNumber);
                 }
-                else if (double.TryParse(new_array[i], out doubleNumber))
+                else if (double.TryParse(new_array[i].Replace('.', ','), out doubleNumber))
                 {
-
+                    new_array[i] = ChangeDoubleNumber(doubleNumber);
                 }
             }
         }
@@ -33,6 +35,17 @@
                 fact *= i;
 
             return Convert.ToString(fact);
+        }
+
+        static string ChangeDoubleNumber(double n)
+        {
+            n = Math.Round(n, 2);
+
+            string result = Convert.ToString(n);
+            result = result.Substring(result.IndexOf(',') + 1);
+            result = Convert.ToString(int.Parse(result));
+
+            return result;
         }
     }
 }
