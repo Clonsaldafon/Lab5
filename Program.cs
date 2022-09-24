@@ -25,6 +25,9 @@ namespace Lab5
                     new_array[i] = ChangeDoubleNumber(doubleNumber);
                 }
             }
+
+            Console.WriteLine("Original: " + string.Join(" ", numbers));
+            Console.WriteLine("Result: " + string.Join(" ", new_array));
         }
 
         static string Factorial(int n)
