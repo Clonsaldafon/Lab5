@@ -2,7 +2,7 @@
 
 namespace Lab5
 {
-    internal class Program
+    internal class task4
     {
         static void Main(string[] args)
         {
