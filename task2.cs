@@ -1,6 +1,6 @@
 ﻿namespace Lab5
 {
-    internal class Program
+    internal class task2
     {
         static void Main(string[] args)
         {
